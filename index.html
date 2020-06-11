@@ -150,8 +150,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-06-11 16:49:15" itemprop="dateCreated datePublished" datetime="2020-06-11T16:49:15+08:00">2020-06-11</time>
+              <time title="Created: 2020-06-11 16:49:15 / Modified: 18:15:52" itemprop="dateCreated datePublished" datetime="2020-06-11T16:49:15+08:00">2020-06-11</time>
             </span>
 
           
@@ -165,7 +166,66 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="创建个人博客网站简介-hexo"><a href="#创建个人博客网站简介-hexo" class="headerlink" title="创建个人博客网站简介(hexo)"></a>创建个人博客网站简介(hexo)</h1><h6 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h6><ul>
+<li>教程并不详细，只介绍主要步骤，请慎重浏览</li>
+<li>只用于windows系统，其他系统并未测试</li>
+</ul>
+<h2 id="必备软件（自行下载安装即可）"><a href="#必备软件（自行下载安装即可）" class="headerlink" title="必备软件（自行下载安装即可）"></a>必备软件（自行下载安装即可）</h2><p>node     官网链接：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a> </p>
+<p>Git          链接：<a href="https://npm.taobao.org/mirrors/git-for-windows/v2.27.0.windows.1/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/git-for-windows/v2.27.0.windows.1/</a></p>
+<h2 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h2><ol>
+<li><p>在安装好的Git目录下，打开Git-cmd.exe。输入命令git config –global user.email “你的邮箱”,回车，输入第二条命令 git config –global user.name “你的用户名”，回车。作用就是在Git上设置你的邮箱和用户名。这个邮箱和用户名是你的GitHub账户的邮箱和用户名，没有的话需要去GitHub注册一个账号，这里不多介绍。</p>
+</li>
+<li><p>打开Git目录下的另一个程序，Git-bash.exe。输入命令ssh-keygen -t rsa -C “<a href="mailto:your_email@example.com">your_email@example.com</a>“。这条命令交给你提供的账号提供一条密钥。密钥的路径一般在你系统盘用户目录中.ssh文件中。此时登录你的GitHub账号，你的主页右上角图像点击下拉列表中的Settings，然后选择SSH and GPG keys,选择第一个新建SSH密钥，标题任意，把系统盘产生的那个密钥文件id_rsa.pub用记事本打开，复制，粘贴到新建SSH密钥框中，保存即可。</p>
+</li>
+</ol>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ul>
+<li><p>win+R，打开运行窗口，输入命令cmd，回车。</p>
+</li>
+<li><p>可以先检测一下自己的node和npm版本，查看是否已经安装好。<br>命令：node -v</p>
+<pre><code>npm -v</code></pre></li>
+<li><p>安装淘宝的cnpm管理器<br>命令：npm install -g cnpm -registry=<a href="http://registry.npm.taobao.org" target="_blank" rel="noopener">http://registry.npm.taobao.org</a></p>
+</li>
+<li><p>安装好后，可以查看一下版本，检测是否安装成功<br>命令：cnpm -v</p>
+</li>
+<li><p>创建blog文件夹<br>命令：mkdir blog<br>默认是建在系统盘用户目录里面，可以自己更改路径，例如mkdir E:\blog</p>
+</li>
+<li><p>在创建好后，直接进入blog文件夹<br>命令：cd blog<br>打开时请注意盘符，否则找不到文件，盘符可以自己选择，或者返回上一级下一级设置，这里不多介绍。</p>
+</li>
+<li><p>生成博客，初始化博客<br>命令：hexo init</p>
+</li>
+<li><p>启动本地博客服务<br>命令：hexo s<br>可以使用<a href="http://localhost:4000/访问自己建好的博客" target="_blank" rel="noopener">http://localhost:4000/访问自己建好的博客</a></p>
+</li>
+<li><p>Github创建一个新的仓库，仓库名称需要跟你的GitHub账号用户名一样。样式：YourGithubName.github.io</p>
+</li>
+<li><p>在blog目录下安装Git部署插件<br>命令：cnpm install -save hexo-deployer-git</p>
+</li>
+<li><p>在文件夹里找到你建立的blog文件夹，用记事本方式打开_config.yml配置文件。<br>文件内容的最后，修改：type： git<br>并添加新的内容：<br>rope:<br>rope后填写你创新的新仓库的地址，可以去GitHub查看。<br>branch：master<br><strong>注：冒号后面都有一个空格，因为冒号</strong></p>
+</li>
+<li><p>部署到仓库里<br>命令：hexo d</p>
+</li>
+<li><p>部署好后，就能用你的域名来访问博客了。样式：<a href="https://YourGithubName.github.io" target="_blank" rel="noopener">https://YourGithubName.github.io</a></p>
+</li>
+<li><p>可以下载yilia主题到本地<br>命令：git clone <a href="http://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">http://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+</li>
+<li><p>修改hexo文件目录下的_config.yml文件<br>修改内容：<br>theme：  冒号后面的内容修改成yilia<br><strong>注：修改主题随自己选择，并非与其一样</strong></p>
+</li>
+<li><p>清理一下<br>命令：hexo c</p>
+</li>
+<li><p>生成<br>命令：hexo g</p>
+</li>
+<li><p>部署到你的仓库<br>命令：hexo d</p>
+</li>
+<li><p>最后就可以使用你的域名查看全新的个人博客网站了。样式：<a href="https://YourGithubName.github.io" target="_blank" rel="noopener">https://YourGithubName.github.io</a></p>
+<p><strong>赶紧快把做好的个人博客网站分享跟你的小伙伴吧</strong></p>
+</li>
+</ul>
+<p>​       博主是第一次写博客。这是建立好个人博客网站后分享的一点心得，也是记下的一部分笔记，不足之处还望各位小伙伴谅解，也请指出我的不足。</p>
+<p>​       关于更多的详细内容也可以参考hexo网站，里面有更详细的教程讲解，还有更多精美的主题等待你的体验。在这里我分享一下官方网址<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
+<p>​        关于其他各种功能用法就不多详细介绍了，这里只介绍如何搭建个人博客网站，还请各位小伙伴谅解，加油吧！</p>
+<p>​        <strong>并不是打广告,你懂的！</strong></p>
+<p>博主个人QQ：2789492959</p>
+<p>不懂的小伙伴可以加我私信哦！</p>
+
       
     </div>
 
