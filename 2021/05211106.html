@@ -470,7 +470,7 @@ typedef struct{
     int length;//顺序表的当前长度
 }SqList;</code></pre>
 <h3 id="（2）顺序表的插入删除"><a href="#（2）顺序表的插入删除" class="headerlink" title="（2）顺序表的插入删除"></a>（2）顺序表的插入删除</h3><blockquote>
-<p>==插入==</p>
+<p><strong>插入</strong></p>
 </blockquote>
 <p>ListInsert(&amp;L,i,e): 插入操作。在表L中的第i个位置上插入指定元素e</p>
 <p><strong>注：这里的i从1开始，表示要插入到表中的位序，i的范围为[1,length+1]</strong></p>
@@ -512,7 +512,7 @@ typedef struct{
 </li>
 </ul>
 <blockquote>
-<p>==删除==</p>
+<p><strong>删除</strong></p>
 </blockquote>
 <p>ListDelete(&amp;L,i,&amp;e):删除操作。删除表L中第i个位置的元素，并用e返回删除元素的值</p>
 <pre class=" language-c++"><code class="language-c++">bool ListDelete(SqList &L,int i,int &e){
@@ -543,7 +543,7 @@ typedef struct{
 <li>平均情况：假设删除任意元素的概率相同，即p=1/n。总循环次数为一个等差数列之和，即s=[n(n-1)]/2。平均循环次数为sp=(n-1)/2。即平均时间复杂度为O(n)。</li>
 </ul>
 <h3 id="（3）顺序表的查找"><a href="#（3）顺序表的查找" class="headerlink" title="（3）顺序表的查找"></a>（3）顺序表的查找</h3><blockquote>
-<p>==按位查找==</p>
+<p><strong>按位查找</strong></p>
 </blockquote>
 <p>GetElem(L,i)：按位查找操作。获取表L中第i个位置的元素。</p>
 <pre class=" language-c++"><code class="language-c++">int GetElem(SqList L,int i){
@@ -557,6 +557,10 @@ typedef struct{
 }</code></pre>
 <p><strong>时间复杂度</strong></p>
 <p>由于顺序表为随机存取，显示，时间复杂度为O(1)。</p>
+<blockquote>
+<p><strong>按值查找</strong></p>
+</blockquote>
+<p>==LocateElem(L,e)==</p>
 
                 
             </div>
