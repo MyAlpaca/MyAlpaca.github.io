@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据结构, Hexo">
+    <meta name="keywords" content="java学习笔记, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据结构 | Hexo</title>
+    <title>java学习笔记 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据结构</h1>
+                    <h1 class="description center-align post-title">java学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-21
+                    2020-07-25
                 </div>
                 
 
@@ -464,99 +464,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、数据结构和算法"><a href="#一、数据结构和算法" class="headerlink" title="一、数据结构和算法"></a>一、数据结构和算法</h1><h2 id="1-数据结构在学什么"><a href="#1-数据结构在学什么" class="headerlink" title="1.数据结构在学什么"></a>1.数据结构在学什么</h2><h2 id="2-数据结构的基本概念"><a href="#2-数据结构的基本概念" class="headerlink" title="2.数据结构的基本概念"></a>2.数据结构的基本概念</h2><h2 id="3-算法的基本概念"><a href="#3-算法的基本概念" class="headerlink" title="3.算法的基本概念"></a>3.算法的基本概念</h2><h2 id="4-算法的时间复杂度"><a href="#4-算法的时间复杂度" class="headerlink" title="4.算法的时间复杂度"></a>4.算法的时间复杂度</h2><h2 id="5-算法的空间复杂度"><a href="#5-算法的空间复杂度" class="headerlink" title="5.算法的空间复杂度"></a>5.算法的空间复杂度</h2><h1 id="二、线性表"><a href="#二、线性表" class="headerlink" title="二、线性表"></a>二、线性表</h1><h2 id="1-线性表的定义和基本操作-采用顺序表"><a href="#1-线性表的定义和基本操作-采用顺序表" class="headerlink" title="1.线性表的定义和基本操作(采用顺序表)"></a>1.线性表的定义和基本操作(采用顺序表)</h2><h3 id="（1）顺序表的定义"><a href="#（1）顺序表的定义" class="headerlink" title="（1）顺序表的定义"></a>（1）顺序表的定义</h3><pre class=" language-c++"><code class="language-c++">#define MaxSize 10 //定义最大长度
-typedef struct{
-    int data[MaxSize];//用静态的“数组”存放数据元素
-    int length;//顺序表的当前长度
-}SqList;</code></pre>
-<h3 id="（2）顺序表的插入删除"><a href="#（2）顺序表的插入删除" class="headerlink" title="（2）顺序表的插入删除"></a>（2）顺序表的插入删除</h3><blockquote>
-<p>==插入==</p>
-</blockquote>
-<p>ListInsert(&amp;L,i,e): 插入操作。在表L中的第i个位置上插入指定元素e</p>
-<p><strong>注：这里的i从1开始，表示要插入到表中的位序，i的范围为[1,length+1]</strong></p>
-<pre class=" language-c++"><code class="language-c++">bool ListInsert(SqList &L,int i,int e){
-
-    /*
-    元素要插入的位置不是大于第一个，或者大于表的长度+1，则不能插入。L.length+1表示尾插，可以在L.length+1的位置插入元素
-    */
-    if(i<1||i>L.length+1){
-        return false;
-    }
-
-    //表已满
-    if(L.length>=MaxSize){
-        return false;
-    }
-
-    /*
-    若要将e插入到第i个位置，首先将最后一个元素向后移动一位。前面元素依次类推，直到移动到第i个元素结束。用以下这种方式，循环结束后，j和i-1的值相等
-    */
-    for(int j = L.length;j>=i;j--){
-        L.data[j] = L.data[j-1];
-    }
-
-    //这里i对应的数组元素下标为i-1，数组下标从0开始，i从1开始
-    L.data[i-1] = e;
-
-    L.length++;
-    return true;
-}</code></pre>
-<p><strong>时间复杂度：</strong> </p>
-<p>问题规模n=L.length(表长)</p>
+                <h1 id="Java核心技术简单笔记"><a href="#Java核心技术简单笔记" class="headerlink" title="Java核心技术简单笔记"></a>Java核心技术简单笔记</h1><h2 id="第一部分：-java基础编程"><a href="#第一部分：-java基础编程" class="headerlink" title="第一部分： java基础编程"></a>第一部分： java基础编程</h2><h3 id="第一章-Java语言概述"><a href="#第一章-Java语言概述" class="headerlink" title="第一章  Java语言概述"></a>第一章  Java语言概述</h3><h5 id="常用的DOS命令"><a href="#常用的DOS命令" class="headerlink" title="常用的DOS命令"></a>常用的DOS命令</h5><p>dir：列出当前目录下的文件以及文件夹</p>
+<p>md：创建目录</p>
+<p>rd：删除目录</p>
+<p>cd：进入指定目录</p>
+<p>cd..：退回到上一级目录</p>
+<p>cd\：退回到根目录</p>
+<p>del：删除文件（del *.扩展名  可以删除所有扩展名相同的文件）</p>
+<p>exit：退出dos命令行</p>
+<h5 id="java语言的主要特点"><a href="#java语言的主要特点" class="headerlink" title="java语言的主要特点"></a>java语言的主要特点</h5><p>面向对象</p>
+<p>健壮性</p>
+<p>跨平台性</p>
+<h5 id="java的几大版本"><a href="#java的几大版本" class="headerlink" title="java的几大版本"></a>java的几大版本</h5><p>javaSE(J2SE)</p>
+<p>javaEE(J2EE)</p>
+<p>javaME(J2ME)</p>
+<h5 id="java两种核心机制"><a href="#java两种核心机制" class="headerlink" title="java两种核心机制"></a>java两种核心机制</h5><p>java虚拟机(java virtal machine)</p>
+<p>垃圾收集机制（Garbage Collection）</p>
+<h6 id="注：java程序还会出现内存泄露和内存溢出的问题吗？-答：yes"><a href="#注：java程序还会出现内存泄露和内存溢出的问题吗？-答：yes" class="headerlink" title="注：java程序还会出现内存泄露和内存溢出的问题吗？ 答：yes"></a>注：java程序还会出现内存泄露和内存溢出的问题吗？ 答：yes</h6><h5 id="JDK、JRE、JVM的关系"><a href="#JDK、JRE、JVM的关系" class="headerlink" title="JDK、JRE、JVM的关系"></a>JDK、JRE、JVM的关系</h5><p>JDK = JRE + 开发工具集（例如javac编译工具）</p>
+<p>JRE = JVM + javaSE标准类库</p>
+<h5 id="java语言的环境搭建"><a href="#java语言的环境搭建" class="headerlink" title="java语言的环境搭建"></a>java语言的环境搭建</h5><p>path环境变量：windows系统执行命令时要搜索的路径。</p>
+<p>环境变量配置(win10)：新增变量：JAVA_HOME    值：jdk路径</p>
+<p>​                            path：%JAVA_HOME%\bin;</p>
+<p>​                                        %JAVA_HOME%\jre\bin;</p>
+<p>​                            变量名CLASSPATH 变量值.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar    </p>
+<h5 id="java简单的编译运行"><a href="#java简单的编译运行" class="headerlink" title="java简单的编译运行"></a>java简单的编译运行</h5><h6 id="使用dos命令行"><a href="#使用dos命令行" class="headerlink" title="使用dos命令行"></a>使用dos命令行</h6><p>编译：javac *.java    </p>
+<p>运行：java *    (不要加扩展名.class)</p>
+<h5 id="java文档注释"><a href="#java文档注释" class="headerlink" title="java文档注释"></a>java文档注释</h5><p>格式：/**</p>
+<p>​            @author 指定java程序的作者</p>
+<p>​            @version 指定源文件的版本</p>
+<p>​            */</p>
+<p>作用：注释内容可以被JDK提供的工具javadoc所解析，生成一套以网页文件形式体现该程序的说明文档。</p>
+<p>操作方式：路径&gt;javadoc -d 新建文件夹名称 -author -version 需要解析文件的文件名称</p>
+<p>如：d:\java\code &gt;avadoc -d HelloWorld -author -version HelloWorld.java</p>
+<p>则由HelloWorld.java文件生成一个HelloWorld的文件夹，里面存储很多网页文件等。</p>
+<h5 id="API文档（Application-Programming-Interface-应用程序编程接口）"><a href="#API文档（Application-Programming-Interface-应用程序编程接口）" class="headerlink" title="API文档（Application Programming Interface,应用程序编程接口）"></a>API文档（Application Programming Interface,应用程序编程接口）</h5><p>下载API：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
+<h3 id="第二章-基本语法"><a href="#第二章-基本语法" class="headerlink" title="第二章 基本语法"></a>第二章 基本语法</h3><h3 id="第三章-数组"><a href="#第三章-数组" class="headerlink" title="第三章 数组"></a>第三章 数组</h3><h5 id="一、eclipse的透视图"><a href="#一、eclipse的透视图" class="headerlink" title="一、eclipse的透视图"></a>一、eclipse的透视图</h5><p>透视图：建议使用javaEE</p>
+<p>Navigator：导航</p>
+<p>Pakeage Explorer:包浏览器</p>
+<p>Console:控制台</p>
+<p>Outline(大纲)习惯放在左侧导航栏，左侧自带的Project Explorer（项目浏览器）通常用不着，所以去掉，右侧Task Lisk（任务列表）通常也用不着，所以也去掉。</p>
+<p>更改编码：UTF-8</p>
+<p>思考问题：为什么要改成utf-8呢？？？</p>
+<p>字体大小的更改</p>
+<p>保存透视图，可以快速重置透视图的界面。</p>
+<h5 id="二、快捷方式"><a href="#二、快捷方式" class="headerlink" title="二、快捷方式"></a>二、快捷方式</h5><p>输入main，按alt+/直接输出完整的主函数格式。public static void main(String[] args){}</p>
+<p>输入syso,按alt+/直接输出System.out.println();</p>
+<p>输入/**，回车，显示完整的文档注释。</p>
 <ul>
-<li><p>最好情况：新元素插入到表尾，不需要移动，最好时间复杂度为O(1)</p>
-</li>
-<li><p>最坏情况：新元素插入到表头，需要将原有的n个元素全都向后移动,最坏时间复杂度为O(n)</p>
-</li>
-<li><p>平均情况：假设新元素插入到任意位置的概率相同，即p=1/(n+1)。总循环次数为一个等差数列之和，即s=[n(n+1)]/2。平均循环次数为sp=n/2。即平均时间复杂度为O(n)。</p>
-</li>
+<li>1.补全代码的声明：alt + /</li>
+<li>2.快速修复: ctrl + 1</li>
+<li>3.批量导包：ctrl + shift + o</li>
+<li>4.使用单行注释：ctrl + /</li>
+<li>5.使用多行注释： ctrl + shift + /</li>
+<li>6.取消多行注释：ctrl + shift + \</li>
+<li>7.复制指定行的代码：ctrl + alt + down 或 ctrl + alt + up</li>
+<li>8.删除指定行的代码：ctrl + d</li>
+<li>9.上下移动代码：alt + up 或 alt + down</li>
+<li>10.切换到下一行代码空位：shift + enter</li>
+<li>11.切换到上一行代码空位：ctrl + shift + enter</li>
+<li>12.如何查看源码：ctrl + 选中指定的结构 或 ctrl + shift + t</li>
+<li>13.退回到前一个编辑的页面：alt + left</li>
+<li>14.进入到下一个编辑的页面(针对于上面那条来说的)：alt + right</li>
+<li>15.光标选中指定的类，查看继承树结构：ctrl + t</li>
+<li>16.复制代码： ctrl + c</li>
+<li>17.撤销： ctrl + z</li>
+<li>18.反撤销： ctrl + y</li>
+<li>19.剪切：ctrl + x</li>
+<li>20.粘贴：ctrl + v</li>
+<li>21.保存： ctrl + s</li>
+<li>22.全选：ctrl + a</li>
+<li>23.格式化代码： ctrl + shift + f</li>
+<li>24.选中数行，整体往后移动：tab</li>
+<li>25.选中数行，整体往前移动：shift + tab</li>
+<li>26.在当前类中，显示类结构，并支持搜索指定的方法、属性等：ctrl + o</li>
+<li>27.批量修改指定的变量名、方法名、类名等：alt + shift + r</li>
+<li>28.选中的结构的大小写的切换：变成大写： ctrl + shift + x</li>
+<li>29.选中的结构的大小写的切换：变成小写：ctrl + shift + y</li>
+<li>30.调出生成 getter/setter/构造器等结构： alt + shift + s</li>
+<li>31.显示当前选择资源(工程 or 文件)的属性：alt + enter</li>
+<li>32.快速查找：参照选中的 Word 快速定位到下一个 ：ctrl + k</li>
+<li></li>
+<li>33.关闭当前窗口：ctrl + w</li>
+<li>34.关闭所有的窗口：ctrl + shift + w</li>
+<li>35.查看指定的结构使用过的地方：ctrl + alt + g</li>
+<li>36.查找与替换：ctrl + f</li>
+<li>37.最大化当前的 View：ctrl + m</li>
+<li>38.直接定位到当前行的首位：home</li>
+<li>39.直接定位到当前行的末位：end</li>
 </ul>
-<blockquote>
-<p>==删除==</p>
-</blockquote>
-<p>ListDelete(&amp;L,i,&amp;e):删除操作。删除表L中第i个位置的元素，并用e返回删除元素的值</p>
-<pre class=" language-c++"><code class="language-c++">bool ListDelete(SqList &L,int i,int &e){
-
-    //这里为L.length,是最后一个元素的位序（不是下标）
-    if(i<1||i>L.length){
-        return false;
-    }
-
-    //先将要删除的元素保存到e中
-    e=L.data[i-1];
-
-    //从i后面一个元素开始，依次往前移动
-    for(int j = i;j<L.length;j++){
-        L.data[j-1] = L.data[j];
-    }
-
-    //移动完，长度减1
-    L.length--;
-
-    return true;
-}</code></pre>
-<p><strong>时间复杂度：</strong> </p>
-<p>问题规模n=L.length(表长)</p>
-<ul>
-<li>最好情况：删除表尾元素，不需要移动，最好时间复杂度为O(1)</li>
-<li>最坏情况：删除表头元素，需要将后续的n-1个元素全都向前移动,最坏时间复杂度为O(n)</li>
-<li>平均情况：假设删除任意元素的概率相同，即p=1/n。总循环次数为一个等差数列之和，即s=[n(n-1)]/2。平均循环次数为sp=(n-1)/2。即平均时间复杂度为O(n)。</li>
-</ul>
-<h3 id="（3）顺序表的查找"><a href="#（3）顺序表的查找" class="headerlink" title="（3）顺序表的查找"></a>（3）顺序表的查找</h3><blockquote>
-<p>==按位查找==</p>
-</blockquote>
-<p>GetElem(L,i)：按位查找操作。获取表L中第i个位置的元素。</p>
-<pre class=" language-c++"><code class="language-c++">int GetElem(SqList L,int i){
-
-    //这里为L.length,是最后一个元素的位序（不是下标）
-    if(i<1||i>L.length){
-        return;
-    }
-
-    return L.data[i-1];
-}</code></pre>
-<p><strong>时间复杂度</strong></p>
-<p>由于顺序表为随机存取，显示，时间复杂度为O(1)。</p>
 
                 
             </div>
@@ -583,7 +578,7 @@ typedef struct{
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://MyAlpaca.github.io.git/2021/05211106.html">https://MyAlpaca.github.io.git/2021/05211106.html</a>
+                    <a href="https://MyAlpaca.github.io.git/2020/072565132.html">https://MyAlpaca.github.io.git/2020/072565132.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -788,48 +783,9 @@ typedef struct{
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2021/05211106.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据结构">
-                        
-                        <span class="card-title">数据结构</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            MyAlpaca
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2021/042013208.html">
                     <div class="card-image">
@@ -847,8 +803,45 @@ typedef struct{
                         
                     </div>
                     <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            MyAlpaca
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06142752.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="HTML5基础知识笔记">
+                        
+                        <span class="card-title">HTML5基础知识笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
                             </span>
                         <span class="publish-author">
                             

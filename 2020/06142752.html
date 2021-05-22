@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据结构, Hexo">
+    <meta name="keywords" content="HTML5基础知识笔记, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据结构 | Hexo</title>
+    <title>HTML5基础知识笔记 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据结构</h1>
+                    <h1 class="description center-align post-title">HTML5基础知识笔记</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-21
+                    2020-06-14
                 </div>
                 
 
@@ -464,99 +464,130 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、数据结构和算法"><a href="#一、数据结构和算法" class="headerlink" title="一、数据结构和算法"></a>一、数据结构和算法</h1><h2 id="1-数据结构在学什么"><a href="#1-数据结构在学什么" class="headerlink" title="1.数据结构在学什么"></a>1.数据结构在学什么</h2><h2 id="2-数据结构的基本概念"><a href="#2-数据结构的基本概念" class="headerlink" title="2.数据结构的基本概念"></a>2.数据结构的基本概念</h2><h2 id="3-算法的基本概念"><a href="#3-算法的基本概念" class="headerlink" title="3.算法的基本概念"></a>3.算法的基本概念</h2><h2 id="4-算法的时间复杂度"><a href="#4-算法的时间复杂度" class="headerlink" title="4.算法的时间复杂度"></a>4.算法的时间复杂度</h2><h2 id="5-算法的空间复杂度"><a href="#5-算法的空间复杂度" class="headerlink" title="5.算法的空间复杂度"></a>5.算法的空间复杂度</h2><h1 id="二、线性表"><a href="#二、线性表" class="headerlink" title="二、线性表"></a>二、线性表</h1><h2 id="1-线性表的定义和基本操作-采用顺序表"><a href="#1-线性表的定义和基本操作-采用顺序表" class="headerlink" title="1.线性表的定义和基本操作(采用顺序表)"></a>1.线性表的定义和基本操作(采用顺序表)</h2><h3 id="（1）顺序表的定义"><a href="#（1）顺序表的定义" class="headerlink" title="（1）顺序表的定义"></a>（1）顺序表的定义</h3><pre class=" language-c++"><code class="language-c++">#define MaxSize 10 //定义最大长度
-typedef struct{
-    int data[MaxSize];//用静态的“数组”存放数据元素
-    int length;//顺序表的当前长度
-}SqList;</code></pre>
-<h3 id="（2）顺序表的插入删除"><a href="#（2）顺序表的插入删除" class="headerlink" title="（2）顺序表的插入删除"></a>（2）顺序表的插入删除</h3><blockquote>
-<p>==插入==</p>
-</blockquote>
-<p>ListInsert(&amp;L,i,e): 插入操作。在表L中的第i个位置上插入指定元素e</p>
-<p><strong>注：这里的i从1开始，表示要插入到表中的位序，i的范围为[1,length+1]</strong></p>
-<pre class=" language-c++"><code class="language-c++">bool ListInsert(SqList &L,int i,int e){
-
-    /*
-    元素要插入的位置不是大于第一个，或者大于表的长度+1，则不能插入。L.length+1表示尾插，可以在L.length+1的位置插入元素
-    */
-    if(i<1||i>L.length+1){
-        return false;
-    }
-
-    //表已满
-    if(L.length>=MaxSize){
-        return false;
-    }
-
-    /*
-    若要将e插入到第i个位置，首先将最后一个元素向后移动一位。前面元素依次类推，直到移动到第i个元素结束。用以下这种方式，循环结束后，j和i-1的值相等
-    */
-    for(int j = L.length;j>=i;j--){
-        L.data[j] = L.data[j-1];
-    }
-
-    //这里i对应的数组元素下标为i-1，数组下标从0开始，i从1开始
-    L.data[i-1] = e;
-
-    L.length++;
-    return true;
-}</code></pre>
-<p><strong>时间复杂度：</strong> </p>
-<p>问题规模n=L.length(表长)</p>
+                <h1 id="HTML5基础知识笔记"><a href="#HTML5基础知识笔记" class="headerlink" title="HTML5基础知识笔记"></a>HTML5基础知识笔记</h1><h6 id="注：1-个人记录的笔记，不是什么技术"><a href="#注：1-个人记录的笔记，不是什么技术" class="headerlink" title="注：1.个人记录的笔记，不是什么技术"></a>注：1.个人记录的笔记，不是什么技术</h6><h6 id="2-笔记不是非常详细"><a href="#2-笔记不是非常详细" class="headerlink" title="2.笔记不是非常详细"></a>2.笔记不是非常详细</h6><h3 id="一、HTML基础"><a href="#一、HTML基础" class="headerlink" title="一、HTML基础"></a>一、HTML基础</h3><p>Web前段开发工程师应该掌握以下内容：</p>
 <ul>
-<li><p>最好情况：新元素插入到表尾，不需要移动，最好时间复杂度为O(1)</p>
-</li>
-<li><p>最坏情况：新元素插入到表头，需要将原有的n个元素全都向后移动,最坏时间复杂度为O(n)</p>
-</li>
-<li><p>平均情况：假设新元素插入到任意位置的概率相同，即p=1/(n+1)。总循环次数为一个等差数列之和，即s=[n(n+1)]/2。平均循环次数为sp=n/2。即平均时间复杂度为O(n)。</p>
-</li>
+<li>掌握HTML文档的基本结构</li>
+<li>理解标签类型，标签语法</li>
+<li>学会body标签属性的设置方法</li>
+<li>学会给网页添加注释</li>
+<li>理解元信息meta标签的作用</li>
 </ul>
-<blockquote>
-<p>==删除==</p>
-</blockquote>
-<p>ListDelete(&amp;L,i,&amp;e):删除操作。删除表L中第i个位置的元素，并用e返回删除元素的值</p>
-<pre class=" language-c++"><code class="language-c++">bool ListDelete(SqList &L,int i,int &e){
+<p>HTML文档由头部head和主体body两个部分组成。</p>
+<h5 id="1-head标签"><a href="#1-head标签" class="headerlink" title="1.head标签"></a>1.head标签</h5><p>包含页面标题标签、元信息标签、样式标签、脚本标签、链接标签。</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span><span class="token punctuation">></span></span>  
+<span class="token comment" spellcheck="true">&lt;!--name属性          值：uthor(定义网页作者)
+                         description(定义网页简短描述)
+                          keywords(定义网页关键字)
+                          generator(定义编辑器)
+    http-equiv属性    值： content-type(内容类型)
+                         expires(网页缓存过期时间)
+                         refresh(刷新与跳转（重定向）页面)
+                         set-cookie(如果网页过期，那么存盘的cookie将被删除)
+    content             值：some_text(定义与http-equiv或name属性相关的元信息)--></span></code></pre>
+<h5 id="2-body标签"><a href="#2-body标签" class="headerlink" title="2.body标签"></a>2.body标签</h5><p>包含网页中的所有内容，如图片、图像、表格、文字、超链接等元素。</p>
+<p>body标签的属性：topmargin、leftmargin、text、bgcolor、background、link、alink、vlink。</p>
+<p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">leftmargin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50px<span class="token punctuation">"</span></span> <span class="token attr-name">topmargin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50px<span class="token punctuation">"</span></span> <span class="token attr-name">text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#000000<span class="token punctuation">"</span></span> <span class="token attr-name">bgcolor</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#339999<span class="token punctuation">"</span></span> <span class="token attr-name">link</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blue<span class="token punctuation">"</span></span> <span class="token attr-name">alink</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>white<span class="token punctuation">"</span></span> <span class="token attr-name">vlink</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span> <span class="token attr-name">background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>body_image.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    内容
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<p>topmargin:规定文档中上边距的大小;</p>
+<p>leftmargin:规定文档中左边距的大小;</p>
+<p>text:网页中文字的颜色;</p>
+<p>bgcolor:规定文档的背景颜色;</p>
+<p>background:规定文档的背景图像;</p>
+<p>link:规定文档中未访问链接的默认颜色;</p>
+<p>alink:规定文档中活动链接的颜色;</p>
+<p>vlink:规定文档中访问后链接的颜色。</p>
+<h5 id="3-标记类型"><a href="#3-标记类型" class="headerlink" title="3.标记类型"></a>3.标记类型</h5><p>单标签，双标签。</p>
+<p>属性格式：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>标记名称</span> <span class="token attr-name">属性名1</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>属性值1<span class="token punctuation">"</span></span> <span class="token attr-name">属性名2</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>属性值2<span class="token punctuation">"</span></span> <span class="token attr-name">...</span> <span class="token attr-name">属性值n</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>属性值n<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>标记名称</span><span class="token punctuation">></span></span></code></pre>
+<h5 id="4-注释"><a href="#4-注释" class="headerlink" title="4.注释"></a>4.注释</h5><!--注释内容-->
 
-    //这里为L.length,是最后一个元素的位序（不是下标）
-    if(i<1||i>L.length){
-        return false;
-    }
-
-    //先将要删除的元素保存到e中
-    e=L.data[i-1];
-
-    //从i后面一个元素开始，依次往前移动
-    for(int j = i;j<L.length;j++){
-        L.data[j-1] = L.data[j];
-    }
-
-    //移动完，长度减1
-    L.length--;
-
-    return true;
-}</code></pre>
-<p><strong>时间复杂度：</strong> </p>
-<p>问题规模n=L.length(表长)</p>
+<p><comment>注释内容</comment></p>
+<h3 id="二、格式化文本与段落"><a href="#二、格式化文本与段落" class="headerlink" title="二、格式化文本与段落"></a>二、格式化文本与段落</h3><p>Web前段开发工程师应该掌握以下的内容：</p>
 <ul>
-<li>最好情况：删除表尾元素，不需要移动，最好时间复杂度为O(1)</li>
-<li>最坏情况：删除表头元素，需要将后续的n-1个元素全都向前移动,最坏时间复杂度为O(n)</li>
-<li>平均情况：假设删除任意元素的概率相同，即p=1/n。总循环次数为一个等差数列之和，即s=[n(n-1)]/2。平均循环次数为sp=(n-1)/2。即平均时间复杂度为O(n)。</li>
+<li>掌握标题字（h1~h6）标签语法以及属性语法</li>
+<li>理解文本格式化标签类型与作用，并学会使用各种样式</li>
+<li>学会使用字体font标签</li>
+<li>学会使用段落与排版标签</li>
+<li>学会使用各类格式化标签设计简易的web页面</li>
 </ul>
-<h3 id="（3）顺序表的查找"><a href="#（3）顺序表的查找" class="headerlink" title="（3）顺序表的查找"></a>（3）顺序表的查找</h3><blockquote>
-<p>==按位查找==</p>
-</blockquote>
-<p>GetElem(L,i)：按位查找操作。获取表L中第i个位置的元素。</p>
-<pre class=" language-c++"><code class="language-c++">int GetElem(SqList L,int i){
-
-    //这里为L.length,是最后一个元素的位序（不是下标）
-    if(i<1||i>L.length){
-        return;
-    }
-
-    return L.data[i-1];
-}</code></pre>
-<p><strong>时间复杂度</strong></p>
-<p>由于顺序表为随机存取，显示，时间复杂度为O(1)。</p>
+<h5 id="1-向web页面添加文字信息"><a href="#1-向web页面添加文字信息" class="headerlink" title="1.向web页面添加文字信息"></a>1.向web页面添加文字信息</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    向这里添加内容
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<p>语法说明：</p>
+<p>body标签定义文档的主体。</p>
+<h5 id="2-标题字标签"><a href="#2-标题字标签" class="headerlink" title="2.标题字标签"></a>2.标题字标签</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>1号标题文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>2号标题文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>3号标题文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>4号标题文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>5号标题文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>6号标题文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span></code></pre>
+<p>语法说明：</p>
+<p>h后面数字越小标题字越大。</p>
+<h5 id="3-添加空格与特殊字符"><a href="#3-添加空格与特殊字符" class="headerlink" title="3.添加空格与特殊字符"></a>3.添加空格与特殊字符</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token entity" title="&nbsp;">&amp;nbsp;</span>
+    <span class="token entity" title="&lt;">&amp;lt;</span>
+    <span class="token entity" title="&reg;">&amp;reg;</span>
+    <span class="token entity" title="&times;">&amp;times;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></code></pre>
+<p>语法说明：</p>
+<pre class=" language-html"><code class="language-html">空格        &amp;nbsp
+&lt;         &amp;lt
+>         &amp;gt
+&amp;        &amp;amp
+"        &amp;quot
+版权        &amp;copy
+注册商标   &amp;reg
+乘号        &amp;times
+除号        &amp;divide</code></pre>
+<h5 id="4-文本修饰标签"><a href="#4-文本修饰标签" class="headerlink" title="4.文本修饰标签"></a>4.文本修饰标签</h5><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>定义粗体/b> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span>定义斜体<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>定义下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">></span></span>定义删除线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>定义上标<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span>定义下标<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>定义着重文字，与<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>效果相同<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>定义加重语气，与<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>效果相同<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span><span class="token punctuation">></span></span>变小字号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>big</span><span class="token punctuation">></span></span>变大字号<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>big</span><span class="token punctuation">></span></span></code></pre>
+<h5 id="5-字体font标签"><a href="#5-字体font标签" class="headerlink" title="5.字体font标签"></a>5.字体font标签</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span> <span class="token attr-name">face</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">></span></span></code></pre>
+<p>size:取值+1<del>+7,1</del>7,-1~-7</p>
+<p>color:rgb(r,g,b),#rrggbb,#rgb,colorname</p>
+<p>face:字体1，字体2，… ，字体n</p>
+<h5 id="6-段落p标签"><a href="#6-段落p标签" class="headerlink" title="6.段落p标签"></a>6.段落p标签</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left|center|right|justify<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>段落正文内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+<h5 id="7-换行标签"><a href="#7-换行标签" class="headerlink" title="7.换行标签"></a>7.换行标签</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>或<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span></code></pre>
+<h5 id="8-水平分割线标签"><a href="#8-水平分割线标签" class="headerlink" title="8.水平分割线标签"></a>8.水平分割线标签</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">noshade</span><span class="token punctuation">></span></span></code></pre>
+<p>width:像素(px)或百分比,设置水平线宽度</p>
+<p>size:整数，单位px，设置水平线高度</p>
+<p>color:rgb函数、十六进制数、颜色英文名</p>
+<p>align:left|right|center</p>
+<h5 id="9-预格式标签"><a href="#9-预格式标签" class="headerlink" title="9.预格式标签"></a>9.预格式标签</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">></span></span>预格式化文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">></span></span></code></pre>
+<p>作用：浏览器会完整保留设计者在源文件中所定义的格式，包括各种空格、缩进以及其他特殊格式。</p>
+<h3 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a>三、列表</h3><p>分类：无序列表，有序列表，菜单列表（不常用），目录列表（不常用），定义列表。</p>
+<h5 id="1-无序列表"><a href="#1-无序列表" class="headerlink" title="1.无序列表"></a>1.无序列表</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>项目名称<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>项目名称<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code></pre>
+<p>标记说明：</p>
+<p>type属性值   disc(实心圆形)、circle(空心圆形)、square(实心正方形)。</p>
+<h5 id="2-有序列表"><a href="#2-有序列表" class="headerlink" title="2.有序列表"></a>2.有序列表</h5><p>基本语法：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">start</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>n<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>n<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span></code></pre>
 
                 
             </div>
@@ -583,7 +614,7 @@ typedef struct{
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://MyAlpaca.github.io.git/2021/05211106.html">https://MyAlpaca.github.io.git/2021/05211106.html</a>
+                    <a href="https://MyAlpaca.github.io.git/2020/06142752.html">https://MyAlpaca.github.io.git/2020/06142752.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -788,18 +819,17 @@ typedef struct{
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05211106.html">
+                <a href="/2020/072565132.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据结构">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="java学习笔记">
                         
-                        <span class="card-title">数据结构</span>
+                        <span class="card-title">java学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -809,9 +839,9 @@ typedef struct{
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -820,7 +850,6 @@ typedef struct{
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -831,13 +860,13 @@ typedef struct{
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/042013208.html">
+                <a href="/2020/061442075.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="MyBatis入门笔记">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="网站推荐">
                         
-                        <span class="card-title">MyBatis入门笔记</span>
+                        <span class="card-title">网站推荐</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -848,7 +877,7 @@ typedef struct{
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
                             </span>
                         <span class="publish-author">
                             
